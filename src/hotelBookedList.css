@@ -1,0 +1,119 @@
+.bookedList-backg{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(216, 216, 216, 0.926);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bookedList-screen-cont{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bookedList-view-screen{
+    width: 95%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.bookedList-view-screen::-webkit-scrollbar{
+    width: 0;
+}
+
+.bookedList-top-main-cont{
+    width: 100%;
+    height: 15%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+}
+
+.top-navBar-cont{
+    width: 100%;
+    height: 45%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bookedList-search-box-cont{
+    width: 100%;
+    height: 50%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bookedList-searchIcon-container{
+    background-color: white;
+    height: 60%;
+    width: 5%;
+    border-bottom: 2px solid hwb(0 53% 47%);
+    border-top: 2px solid hwb(0 53% 47%);
+    border-left: 2px solid hwb(0 53% 47%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.bookedList-searchIcon-container img{
+    width: 65%;
+    height: 60%;
+    object-fit: cover;
+}
+.bookedList-searchInput-cont{
+    width: 95%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid  hwb(0 53% 47%);
+    border-top: 2px solid  hwb(0 53% 47%);
+    border-right: 2px solid  hwb(0 53% 47%);
+}
+.bookedList-searchInput-cont input{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.bookedList-searchInput-cont input[type="search"]:focus{
+    outline: none;
+    border: none;
+
+}
+
+.bookedList-hotel-booked-list-cont{
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.bookedList-hotel-booked-list-cont ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}

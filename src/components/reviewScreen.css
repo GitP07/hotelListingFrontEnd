@@ -1,0 +1,328 @@
+
+/* below screen cont */
+.review-screen-below-cont{
+    height: 100%;
+    width: 100%;
+    /* background-color: #9df4f4; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Hotel description */
+.hotel-desc-cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 2px solid rgb(145, 145, 145);
+    /* background-color: aqua; */
+
+}
+.desc-title{
+    width: 40%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #0090FF; */
+}
+.desc-title p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+.desc-box{
+    width: 90%;
+    height: auto;
+    min-height: 20%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* background-color: brown; */
+    
+
+}
+.desc-box p{
+    font-size: 0.8rem;
+    color: black;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+
+/* Hotel facilities*/
+.hotel-facilities-cont{
+    width: 100%;
+    background-color: #E0E8ED;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.facilities-title{
+    width: 25%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.facilities-title p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+.facilities-list-cont{
+    width: 95%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* hotel checkInOut Info cont*/
+.hotel-checkInOut-cont{
+    width: 100%;
+    height: 20%;
+    border-bottom: 2px solid rgb(145, 145, 145);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hotelCheckInOut-icon-cont{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* hotel other facelities */
+.hotel-other-facilities-cont{
+    width: 100%;
+    height: 15%;
+    min-height: 15%;
+    max-height: 15%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid rgb(145, 145, 145);
+
+}
+
+.otherFacilities-item-cont{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.otheFacilities-itemIcon-cont{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+.otheFacilities-itemIcon-cont p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+
+/*checkInOut available*/
+.checkAvailable-info-cont{
+    width: 100%;
+    min-height: 30%;
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.checkInOut-date-cont{
+    width: 95%;
+    height: 75%;
+    margin-left: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* number of guest adult,children,room*/
+.numOfGuest-room-cont{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(145, 145, 145);
+}
+.numOfGuest-room-cont:hover{
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+  
+}
+.guestCategory-room-cont{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buildingIcon-cont{
+    width: 8%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buildingIcon-cont img{
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+}
+.downArrow-icon-cont{
+    width: 8%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.downArrow-icon-cont img{
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+}
+.downArrow-icon-cont:hover{
+    cursor: pointer;
+}
+.adult-cont{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adult-cont p{
+    margin-left: 3%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.children-cont{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.children-cont p{
+    margin-left: 3%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.numRoom-cont{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.numRoom-cont p{
+    margin-left: 3%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* Hotel Food List*/
+.hotel-foodList-cont{
+    width: 100%;
+    height: 25%;
+    min-height: 25%;
+    max-height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid rgb(145, 145, 145);
+}
+.foodList-head-cont{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.foodList-head-cont p{
+    margin-left: 3%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.viewAll-btn-cont{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewAll-btn-cont p{
+    color: hwb(219 0% 0%);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.viewAll-btn-cont:hover p{
+    color: rgb(8, 0, 255);
+    cursor: pointer;
+
+}
+
+/* food List scroll screen*/
+.foodList-scrollScreen-cont{
+    width: 100%;
+    height: 85%;
+    min-height: 85%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+}
+.foodList-scrollScreen-cont::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.map-cont{
+    width: 100%;
+    height: 30%;
+    min-height: 30%;
+    max-height: 30%;
+    background-color: #E0E8ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map-cont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

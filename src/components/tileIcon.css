@@ -1,0 +1,49 @@
+.facilitiesIcon-cont{
+    /* background-color: chartreuse; */
+    width: 20%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.wifiIcon-cont{
+    width: 30%;
+    height: 45%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wifiIcon-cont img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+.wifi-text-cont{
+    width: 95%;
+    height: 50%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wifi-text-cont p{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.gymIcon-cont{
+    width: 60%;
+    height: 45%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gymIcon-cont img{
+    width: 70%;
+    height: 90%;
+    object-fit: cover;
+}

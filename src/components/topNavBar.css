@@ -1,0 +1,99 @@
+.top-navBarDiv-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    /* background-color: #00f7ff; */
+}
+
+.back-name-cont{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* background-color: yellow; */
+
+}
+.backIcon-cont{
+    height: 50%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+.backIcon-cont img{
+    width:60%;
+    height: 90%;
+    object-fit: cover;
+}
+.hotel-name-cont{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    /* background-color: blue; */
+}
+.hotel-name-cont p{
+    font-size: 1.2rem;
+    font-weight: bold ;
+    color: white;
+    cursor: pointer;
+}
+
+
+.sharIcon-cont{
+    width: 5%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+}
+.sharIcon-cont img{
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+}
+
+
+.clearAll-text-cont{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+}
+.clearAll-text-cont p{
+    font-size: 1rem;
+    font-weight: bold ;
+    color:  #0090FF;
+    cursor: pointer;
+}
+.clearAll-text-cont  p:hover{
+    color: hsl(218, 100%, 50%);
+}
+
+.hotel-historyName-cont{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+}
+.hotel-historyName-cont p{
+    font-size: 1.3rem;
+    font-weight: bold ;
+    color: black;
+    cursor: pointer;
+    margin-left: 3%;
+}

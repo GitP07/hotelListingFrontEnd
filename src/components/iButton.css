@@ -1,0 +1,217 @@
+
+.hotelRoom-nightPrice-cont{
+    /* background-color: aquamarine; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(145, 145, 145);
+
+}
+.hotelRoom-nightPrice-cont p{
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.price-cont{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    /* background-color: aqua; */
+}
+.price-cont p{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.hotel-cutPrice-cont{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    justify-content: flex-end;
+    /* background-color: blueviolet; */
+}
+.hotel-cutPrice-cont p{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.hotel-offerPrice-cont{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: hwb(224 7% 13%); */
+    padding-left: 3%;
+}
+.hotel-offerPrice-cont p{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+
+.hotelRoom-bookBtn-cont{
+    background-image: linear-gradient(to right, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid  rgb(145, 145, 145);
+    border-bottom: 2px solid  rgb(145, 145, 145);
+    border-right: 2px solid  rgb(145, 145, 145);
+
+}
+.hotelRoom-bookBtn-cont p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+.hotelRoom-bookBtn-cont:hover{
+    background-image: linear-gradient(to right, rgba(0, 255, 148, 1),  rgba(0, 144, 255, 1));
+    transition: 0.2s ease;
+
+}
+
+.rounded-small-btn{
+    width: 25%;
+    height: 75%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+    margin-right: 10%;
+
+}
+.rounded-small-btn:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.6);
+    width: 27%;
+    height: 80%;
+    transition: 0.2s ease;
+
+}
+.rounded-small-btn p{
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* sing in sing up button*/
+.singUp-singIn-btn{
+    width: 90%;
+    height: 85%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+    cursor: pointer;
+}
+.singUp-singIn-btn:hover{
+    border: 2px solid hwb(219 0% 0%);
+    width: 91%;
+    height: 87%;
+
+}
+.singUp-singIn-btn p{
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+.facebook-singIn-btn{
+    width: 80%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #266AD1;
+    cursor: pointer;
+}
+.facebook-singIn-btn:hover{
+    border: 2px solid hwb(219 0% 0%);
+    width: 81%;
+    height: 76%;
+
+}
+.facebook-singIn-btn p{
+    font-weight: 700;
+    font-size: 1rem;
+    color:  white;
+}
+
+
+.google-singIn-btn{
+    width: 80%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #D14426;
+    cursor: pointer;
+}
+.google-singIn-btn:hover{
+    border: 2px solid hwb(219 0% 0%);
+    width: 81%;
+    height: 76%;
+
+}
+.google-singIn-btn p{
+    font-weight: 700;
+    font-size: 1rem;
+    color:  white;
+}
+
+.big-round-btn{
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+}
+.big-round-btn:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to left, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+}
+.big-round-btn p{
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+
+@media screen and (max-width: 390px){
+    .rounded-small-btn{
+        width: 30%;
+    }
+    .rounded-small-btn p{
+        font-weight: 600;
+        font-size: 0.6rem;
+        color: white;
+    }
+}

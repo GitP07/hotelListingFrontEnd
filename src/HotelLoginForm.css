@@ -1,0 +1,165 @@
+.login-backg{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(216, 216, 216, 0.926);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-view-screen{
+    width: 40%;;
+    height: 100%;
+    display: flex;
+    background-image: linear-gradient(to top, rgba(0, 144, 255, 1), rgba(0, 255, 148, 1));
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/*pop up login message*/
+.login-error-msg-cont{
+    width: 40%;
+    height: 6%;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.login-error-msg-cont p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: red;
+    text-decoration: underline;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+
+
+.login-main-screen{
+    height: 90%;
+    width: 90%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+.form-head-text-cont{
+    width: 100%;
+    height: 10%;
+    /* background-color: beige; */
+    display: flex;
+    align-items: center;
+}
+.form-head-text-cont p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.form-fields-cont{
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+
+.input-fields-btn-cont{
+    width: 95%;
+    height: 70%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+}
+.email-pass-container{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottom-fields-cont{
+    width: 100%;
+    height: 25%;
+    /* background-color: cadetblue; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.forgot-pass-cont{
+    width: 100%;
+    height: 15%;
+    /* background-color: chocolate; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgot-pass-cont a{
+    color: red;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.forgot-pass-cont a:hover{
+    color: hwb(219 0% 0%);
+}
+
+.singIn-btn-cont{
+    width: 100%;
+    height: 15%;
+    /* background-color: white; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.other-login-btn-cont{
+    width: 100%;
+    height: 40%;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.otherLogin-text-cont{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.otherLogin-text-cont p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hwb(0 53% 47%);
+}
+
+
+@media screen and (max-width: 390px){
+    .login-view-screen{
+        width: 100%;
+    }
+}

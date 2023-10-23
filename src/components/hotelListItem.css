@@ -1,0 +1,251 @@
+.li-list-container{
+    width: 100%;
+    height: 20%;
+    /* background-color: hsl(134, 99%, 50%); */
+    border-bottom: 2px solid  hwb(0 53% 47%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-box-cont{
+    width: 100%;
+    height: 95%;
+    /* background-color: #01dafc; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.list-box-cont:hover{
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+    height: 98%;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+    
+}
+.hotel-detail-cont{
+    width: 100%;
+    height: 90%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hotelImg-cont{
+    height: 100%;
+    width: 21%;
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+}
+.hotelImg-cont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+.hotel-info-cont{
+    height: 100%;
+    width: 75%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hotel-name-star-info{
+    height: 50%;
+    width: 100%;
+    /* background-color: hsl(274, 99%, 50%); */
+    display: flex;
+    flex-direction: column;
+
+}
+.hotelList-name-cont{
+    /* background-color: greenyellow; */
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+}
+.hotelList-name-cont p{
+    font-weight: 700;
+    font-size: 0.9rem;
+  
+}
+.hotelList-star-cont{
+    /* background-color: red; */
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+ 
+
+.hotel-avgReview-cont{
+    width: 15%;
+    height: 100%;
+    /* background-color: #7f6399; */
+    display: flex;
+    align-items: center;
+}
+.hotel-avgReview-cont p{
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: hwb(0 53% 47%); 
+    margin-left: 5%;  
+}
+
+.hotel-reviewCount-cont{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(241, 238, 30); */
+}
+.hotel-reviewCount-cont{
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: hwb(0 53% 47%); 
+}
+
+
+.hotelList-starIcon-cont{
+    /* background-color: pink; */
+    margin-left: 1%;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hotelList-starIcon-cont img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*HOTEL LIST PRICE AND BTN CONTAINER*/
+.hotelList-price-btn-cont{
+    height: 30%;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hotelList-priceOffer-cont{
+    /* background-color: yellow; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hotelList-offerPer-cont{
+    width: 50%;
+    height: 80%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hotelList-offerPer-cont p{
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: orange;
+}
+
+.hotelListprice-cont{
+    height: 70%;
+    width: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+.hotelListprice-cont p{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+.hotelInfo-desc-cont{
+    width: 100%;
+    height: 20%;
+    /* background-color: yellow; */
+    display: flex;
+}
+
+/*hotel description container*/
+.hotel-descText-cont{
+    /* background-color: aqua; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.hotel-descText-cont p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*last booked date of hotel container*/
+.hotel-bookedDate-cont{
+    /* background-color: aqua; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.hotel-bookedDate-cont p{
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width: 390px){
+    .hotelList-name-cont p{
+        font-weight: 700;
+        font-size: 0.7rem;
+      
+    }
+
+    .hotel-avgReview-cont p{
+        font-weight: 600;
+        font-size: 0.6rem; 
+    }
+    .hotel-reviewCount-cont{
+        font-weight: 600;
+        font-size: 0.6rem;
+        
+    }
+    .hotel-descText-cont p{
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    .hotelList-offerPer-cont p{
+        font-weight: 800;
+        font-size: 0.6rem;
+    }
+    .hotelListprice-cont p{
+        font-weight: 700;
+        font-size: 0.6rem;
+    }
+}

@@ -1,0 +1,67 @@
+/*Check Available*/
+.check-available-cont{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+
+.checkIn-date-cont{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(145, 145, 145);
+   
+}
+.checkIn-date-cont:hover{
+    cursor: pointer;
+    background-color:  rgb(200, 200, 200);
+}
+.checkInIcon-date-cont{
+    /* background-color: #1aef1a; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.checkInIcon-date-cont p{
+    margin-left: 3%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.checkInIcon-cont{
+   
+    width: 15%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkInIcon-cont img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+.downArrow-icon-cont{
+    width: 8%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.downArrow-icon-cont img{
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+}
+.downArrow-icon-cont:hover{
+    cursor: pointer;
+}
