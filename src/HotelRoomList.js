@@ -151,14 +151,7 @@ function HotelRoomList() {
             .catch((err) => console.log(`Error: ${err}`))
     }
 
-    // const [searchHotel, setSearchHotel] = useState([])
-    // const handalSearch = (searchValue) =>{
-    //     axios.post("http://localhost:8080/searchHotelRoomByName/" + searchValue)
-    //         .then((res) => {
-    //             setSearchHotel(res.data)
-    //         })
-    //         .catch((err) => console.log(`Error: ${err}`))
-    // }
+   
 
 
 
