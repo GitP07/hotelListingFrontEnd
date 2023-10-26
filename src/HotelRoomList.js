@@ -4,6 +4,8 @@ import searchIcon from "./images/searchIcon.png";
 import rectangleIcon from "./images/Rectangle.png";
 import hotel3 from "./images/hotel3.jpg";
 import star from "./images/Star.png";
+import searchBlackIcon from "./images/blackSearchIcon.png";
+import searchArrowIcon from "./images/searchArrow (2).png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import HotelListItem from "./components/hotelListItem";
@@ -15,12 +17,18 @@ function HotelRoomList() {
     const [hotelInfo, setHotelInfo] = useState([]);
     const [hotelLocation, setHotelLocation] = useState([]);
     const [hotelAmenities, setHotelAmenities] = useState([]);
+    const [searchOption, setSearchOption] = useState([]);
+    const [searchValue, setSearchValue] = useState([])
     const navigate = useNavigate();
     const [cookies, removeCookies] = useCookies([]);
+
 
     const bodyClick = () => {
         setHotelLocation("");
         setHotelAmenities("");
+        setSearchOption([]);
+
+
     }
 
     useEffect(() => {
@@ -35,15 +43,14 @@ function HotelRoomList() {
 
         axios.get("http://localhost:8080", { withCredentials: true })
             .then((res) => {
-                setHotelInfo(res.data);
-                console.log(`res Status ${res.status}`);
-                console.log(`res data: ${JSON.stringify(res.data)}`);
+                console.log("HOTELS ROOMS LIST INFO");
+                return setHotelInfo(res.data);
             })
             .catch((error) => {
                 console.log(`Error: ${error}`);
             })
-        
-        
+
+
 
     }, [cookies, navigate, removeCookies])
 
@@ -116,6 +123,44 @@ function HotelRoomList() {
 
     }
 
+    const handalSearchOption = (e) => {
+        console.log(e.target.value);
+        setSearchValue(e.target.value);
+        const searchOption = {
+            "hotel_name": e.target.value
+        }
+        axios.post("http://localhost:8080/hotelSearchOptionNames", searchOption)
+            .then((res) => {
+                console.log(`SEARCH OPTION ${JSON.stringify(res.data)}`);
+                if (res.data.message) {
+                    setSearchOption("");
+                }
+                else {
+                    setSearchOption(res.data)
+
+                }
+            })
+            .catch((err) => console.log(`ERROR: ${err}`))
+    }
+    const handalHotelRooomList = (hotelName) => {
+        console.log(`handalroomlis function`);
+        axios.post("http://localhost:8080/searchHotelRoomByName/" + hotelName)
+            .then((res) => {
+                setHotelInfo(res.data);
+            })
+            .catch((err) => console.log(`Error: ${err}`))
+    }
+
+    // const [searchHotel, setSearchHotel] = useState([])
+    // const handalSearch = (searchValue) =>{
+    //     axios.post("http://localhost:8080/searchHotelRoomByName/" + searchValue)
+    //         .then((res) => {
+    //             setSearchHotel(res.data)
+    //         })
+    //         .catch((err) => console.log(`Error: ${err}`))
+    // }
+
+
 
     return (
         <div className="backg" onClick={bodyClick}>
@@ -126,7 +171,7 @@ function HotelRoomList() {
                             <div className="site-name-cont">
                                 <p>Hotels</p>
                             </div>
-                            {/** location of hotel Rooms available */}
+
                             <div className="locat-icon-cont" id="location-icon" onClick={locationList}>
                                 <div className="locatIcon-img-container">
                                     <img src={locatIcon} alt="location-Icon"></img>
@@ -136,8 +181,8 @@ function HotelRoomList() {
                                         <div className="locat-dropdown-cont" >
                                             <ul>
                                                 {
-                                                    hotelLocation.map((location) => (
-                                                        <li onClick={() => locatHotelInfo(location)}>{location}</li>
+                                                    hotelLocation.map((location, index) => (
+                                                        <li onClick={() => locatHotelInfo(location)} key={index}>{location}</li>
                                                     ))
                                                 }
                                             </ul>
@@ -153,9 +198,38 @@ function HotelRoomList() {
                                 <div className="searchIcon-container">
                                     <img src={searchIcon} alt="search-Icon"></img>
                                 </div>
-                                <div className="searchInput-cont">
-                                    <input type="search" placeholder="Search Hotel"></input>
+                                <div className="searchInput-cont" >
+                                    <input type="search" placeholder="Search Hotel" name="searchBox"  onChange={handalSearchOption} ></input>
                                 </div>
+                                <div className="search-btn-container">
+                                    <input type="button" value="search" onClick={() => handalHotelRooomList(searchValue)}></input>
+                                </div>
+
+
+                                {
+                                    searchOption !== null && searchOption.length > 0 ? (
+                                        <ul className="search-Option-list-cont">
+
+                                            {
+                                                searchOption.map((hotelNames, index) => (
+                                                    <li key={index} onClick={() => handalHotelRooomList(hotelNames.hotel_name)}>
+                                                        <div className="searchOption-img-cont">
+                                                            <img src={searchBlackIcon} alt="search-Icon"></img>
+                                                        </div>
+                                                        <div className="search-option-text-cont">
+                                                            <p>{hotelNames.hotel_name}</p>
+                                                        </div>
+                                                        <div className="searchOption-arrowImg-cont">
+                                                            <img src={searchArrowIcon} alt="search-Icon"></img>
+                                                        </div>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>)
+                                        : ""
+                                }
+
+
                             </div>
                         </div>
 
@@ -170,8 +244,8 @@ function HotelRoomList() {
                                             <ul>
 
                                                 {
-                                                    hotelAmenities.map((amenities) => (
-                                                        <li onClick={() => amenitiesHotelInfo(amenities)}>{amenities}</li>
+                                                    hotelAmenities.map((amenities, index) => (
+                                                        <li onClick={() => amenitiesHotelInfo(amenities)} key={index}>{amenities}</li>
                                                     ))
 
                                                 }
@@ -209,27 +283,32 @@ function HotelRoomList() {
                         </div>
                     </div>
 
-                    {hotelInfo != null ? <div className="hotelList-cont">
+                    {hotelInfo != null && hotelInfo.length > 0 ? <div className="hotelList-cont">
                         {/* hotel room list info */}
                         <ul>
                             {
                                 hotelInfo.map((hotel) => (
-                                    <HotelListItem 
-                                    offerPercent={`${Math.round((hotel.offer_price - hotel.room_price) / hotel.offer_price * 100)}% OFF`}
-                                    reviewCount={`Review(${hotel.review_count})`}
-                                    onRowClick={() => listClickEvent(hotel._id)} 
-                                    onBtnCkick={btnClickEvent} 
-                                    descCss="hotel-descText-cont" 
-                                    hotelDesc={hotel.hotel_descr}
-                                    btnTitle="Book Now" hotelImg={hotel3} 
-                                    hotelName={hotel.hotel_name} 
-                                    starNum={hotel.hotel_rating} 
-                                    starIcon={star} 
-                                    price={hotel.room_price} />
+                                    <HotelListItem
+                                        hotelKey={hotel._id}
+                                        offerPercent={`${Math.round((hotel.offer_price - hotel.room_price) / hotel.offer_price * 100)}% OFF`}
+                                        reviewCount={`Review(${hotel.review_count})`}
+                                        onRowClick={() => listClickEvent(hotel._id)}
+                                        onBtnCkick={btnClickEvent}
+                                        descCss="hotel-descText-cont"
+                                        hotelDesc={hotel.hotel_descr}
+                                        btnTitle="Book Now" hotelImg={hotel3}
+                                        hotelName={hotel.hotel_name}
+                                        starNum={hotel.hotel_rating}
+                                        starIcon={star}
+                                        price={hotel.room_price} />
                                 ))
                             }
                         </ul>
-                    </div> : ""}
+                    </div> : 
+                    <div className="hotelEmptyList-cont">
+                        <p>Hotel Rooms Are Not Available</p>
+                    </div>
+                    }
 
                 </div>
             </div>

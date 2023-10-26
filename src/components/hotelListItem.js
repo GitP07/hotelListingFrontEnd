@@ -4,7 +4,7 @@ import Ibutton from "./iButton";
 
 function HotelListItem(props) {
     return (
-        <li className="li-list-container">
+        <li className="li-list-container" key={props.hotelKey}>
             <div className="list-box-cont" onClick={props.onRowClick}>
                 <div className="hotel-detail-cont">
                     <div className="hotelImg-cont">
