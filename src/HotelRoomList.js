@@ -33,7 +33,6 @@ function HotelRoomList() {
 
     useEffect(() => {
         const verifyCookie = async () => {
-            console.log(`cookie token ${cookies.token}`);
             if (!cookies.token) {
                 navigate('/')
             }
@@ -43,7 +42,6 @@ function HotelRoomList() {
 
         axios.get("http://localhost:8080", { withCredentials: true })
             .then((res) => {
-                console.log("HOTELS ROOMS LIST INFO");
                 return setHotelInfo(res.data);
             })
             .catch((error) => {
