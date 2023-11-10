@@ -55,7 +55,7 @@ function LoginForm() {
         customer_pass: password.value
       }
 
-      axios.post("http://localhost:8080/singIn", userLoginData, {withCredentials:  true})
+      axios.post("https://hotels-api-1035.onrender.com/singIn", userLoginData, {withCredentials:  true})
         .then((res) => {
           setLoginInfo(res.data);
 

@@ -105,7 +105,7 @@ function HotelSingUp() {
                 "customer_ph": mobile_no.value
             }
 
-            axios.post("http://localhost:8080/singUp", newUser)
+            axios.post("https://hotels-api-1035.onrender.com/singUp", newUser)
                 .then((res) => {
                     setSingUpInfo(res.data);
                 })

@@ -71,7 +71,7 @@ function HotelDetail() {
 
     useEffect(() => {
 
-        axios.post("http://localhost:8080/displayHotelRoomDetailBy/" + hotelId, { withCredentials: true })
+        axios.post("https://hotels-api-1035.onrender.com/displayHotelRoomDetailBy/" + hotelId, { withCredentials: true })
             .then((res) => {
                 console.log(`Hotel Info ${JSON.stringify(res.data)}`);
                 setHotelInfo(res.data);
@@ -81,7 +81,7 @@ function HotelDetail() {
     }, [hotelId])
 
     const handalUserBooking = () => {
-        axios.get("http://localhost:8080/loginUserData", { withCredentials: true })
+        axios.get("https://hotels-api-1035.onrender.com/loginUserData", { withCredentials: true })
             .then((res) => {
                 console.log(`userDataa ${JSON.stringify(res.data)}`);
                 setUserData(res.data);
