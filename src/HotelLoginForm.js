@@ -45,6 +45,7 @@ function LoginForm() {
 
   }
 
+
   useEffect(() => {
     if (loginUser) {
 
@@ -58,7 +59,6 @@ function LoginForm() {
       axios.post("https://hotels-api-1035.onrender.com/singIn", userLoginData, {withCredentials:  true})
         .then((res) => {
           setLoginInfo(res.data);
-
         })
         .catch((err) => console.log(`Error: ${err}`));
 
