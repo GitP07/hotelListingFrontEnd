@@ -46,7 +46,7 @@ function HotelRoomList() {
 
 
     const handalHightToLowPrice = () => {
-        axios.get("http://localhost:8080/highToLowPriceHotelList")
+        axios.get("https://hotels-api-1035.onrender.com/highToLowPriceHotelList")
             .then((res) => {
                 setHotelInfo(res.data)
             })
@@ -54,7 +54,7 @@ function HotelRoomList() {
     }
 
     const handalLowToHighPrice = () => {
-        axios.get("http://localhost:8080/lowToHighPriceHotelList")
+        axios.get("https://hotels-api-1035.onrender.com/lowToHighPriceHotelList")
             .then((res) => {
                 setHotelInfo(res.data)
             })
@@ -71,7 +71,7 @@ function HotelRoomList() {
         }
         verifyCookie();
 
-        axios.get("http://localhost:8080", { withCredentials: true })
+        axios.get("https://hotels-api-1035.onrender.com", { withCredentials: true })
             .then((res) => {
                 return setHotelInfo(res.data);
             })
@@ -86,7 +86,7 @@ function HotelRoomList() {
 
     const locationList = () => {
         //Hotel Location List
-        axios.post("http://localhost:8080/locationList")
+        axios.post("https://hotels-api-1035.onrender.com/locationList")
             .then((res) => {
                 setHotelLocation(res.data)
                 console.log(`Location:${JSON.stringify(res.data)}`);
@@ -103,7 +103,7 @@ function HotelRoomList() {
             "hotel_address": location
         }
 
-        axios.post("http://localhost:8080/hotelsRoomsInArea", selectedLocat, { withCredentials: true })
+        axios.post("https://hotels-api-1035.onrender.com/hotelsRoomsInArea", selectedLocat, { withCredentials: true })
             .then((res) => {
                 setHotelInfo(res.data)
                 console.log(`selected Location hotel Info: ${JSON.stringify(res.data)}`)
@@ -116,7 +116,7 @@ function HotelRoomList() {
 
     //Hotel Amenities List
     const hotelAmenitiesList = () => {
-        axios.post("http://localhost:8080/hotelsAmenities")
+        axios.post("https://hotels-api-1035.onrender.com/hotelsAmenities")
             .then((res) => {
                 setHotelAmenities(res.data)
             })
@@ -134,7 +134,7 @@ function HotelRoomList() {
         const selectAmenities = {
             "hotel_amenities": amenities
         }
-        axios.post("http://localhost:8080/hotelRoomsByAmenities", selectAmenities)
+        axios.post("https://hotels-api-1035.onrender.com/hotelRoomsByAmenities", selectAmenities)
             .then((res) => setHotelInfo(res.data))
             .catch((error) => console.log(`Error: ${error}`))
 
@@ -144,7 +144,7 @@ function HotelRoomList() {
 
 
     const hotelRatingList = () => {
-        axios.get("http://localhost:8080/hotelRatingList")
+        axios.get("https://hotels-api-1035.onrender.com/hotelRatingList")
             .then((res) => {
                 setHotelRating(res.data);
             })
@@ -155,7 +155,7 @@ function HotelRoomList() {
         const selectedRating = {
             hotel_rating: rating
         }
-        axios.post("http://localhost:8080/hotelRoomListByRating", selectedRating)
+        axios.post("https://hotels-api-1035.onrender.com/hotelRoomListByRating", selectedRating)
             .then((res) => {
                 setHotelInfo(res.data);
             })
@@ -169,7 +169,7 @@ function HotelRoomList() {
         const searchOption = {
             "hotel_name": e.target.value
         }
-        axios.post("http://localhost:8080/hotelSearchOptionNames", searchOption)
+        axios.post("https://hotels-api-1035.onrender.com/hotelSearchOptionNames", searchOption)
             .then((res) => {
                 console.log(`SEARCH OPTION ${JSON.stringify(res.data)}`);
                 if (res.data.message) {
@@ -184,7 +184,7 @@ function HotelRoomList() {
     }
     const handalHotelRooomList = (hotelName) => {
         console.log(`handalroomlis function`);
-        axios.post("http://localhost:8080/searchHotelRoomByName/" + hotelName)
+        axios.post("https://hotels-api-1035.onrender.com/searchHotelRoomByName/" + hotelName)
             .then((res) => {
                 setHotelInfo(res.data);
             })
