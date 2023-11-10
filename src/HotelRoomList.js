@@ -45,33 +45,19 @@ function HotelRoomList() {
     }
 
 
-    const handalHightToLowPrice = () => {
-        axios.get("https://hotels-api-1035.onrender.com/highToLowPriceHotelList")
-            .then((res) => {
-                setHotelInfo(res.data)
-            })
-            .catch((err) => console.log(`Error: ${err}`))
-    }
-
-    const handalLowToHighPrice = () => {
-        axios.get("https://hotels-api-1035.onrender.com/lowToHighPriceHotelList")
-            .then((res) => {
-                setHotelInfo(res.data)
-            })
-            .catch((err) => console.log(`Error: ${err}`))
-    }
-
-
     useEffect(() => {
-        // const verifyCookie = async () => {
-        //     if (!cookies.token) {
-        //         navigate('/')
-        //     }
+        const verifyCookie = async () => {
+            console.log(`${cookies}  bellow is token`);
+            console.log(cookies.token);
 
-        // }
-        // verifyCookie();
+            if (!cookies.token) {
+                navigate('/')
+            }
 
-        axios.get("https://hotels-api-1035.onrender.com/hotelsLists", { withCredentials: true })
+        }
+        verifyCookie();
+
+        axios.get("https://hotels-api-1035.onrender.com/hotelsLists", {withCredentials: true})
             .then((res) => {
                 return setHotelInfo(res.data);
             })
@@ -201,6 +187,23 @@ function HotelRoomList() {
         console.log(`btn click`);
         navigate(`/hotelBookedHistory`);
 
+    }
+
+    
+    const handalHightToLowPrice = () => {
+        axios.get("https://hotels-api-1035.onrender.com/highToLowPriceHotelList")
+            .then((res) => {
+                setHotelInfo(res.data)
+            })
+            .catch((err) => console.log(`Error: ${err}`))
+    }
+
+    const handalLowToHighPrice = () => {
+        axios.get("https://hotels-api-1035.onrender.com/lowToHighPriceHotelList")
+            .then((res) => {
+                setHotelInfo(res.data)
+            })
+            .catch((err) => console.log(`Error: ${err}`))
     }
 
     return (
