@@ -225,3 +225,20 @@
     }
 
 }
+
+@media screen and (max-width: 415px){
+    .singUp-view-screen{
+        width: 100%;
+    }
+
+    .mobileIcon-field-cont img{
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .input-country-code-cont{
+        width: 25%;
+    }
+
+}

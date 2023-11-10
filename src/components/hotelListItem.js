@@ -43,8 +43,7 @@ function HotelListItem(props) {
                                     <p>{`Rs:${props.price}`}</p>
                                 </div>
                             </div>
-
-                            <Ibutton title={props.btnTitle} cssName="rounded-small-btn" onClickEvent={props.onBtnCkick} />
+                                <Ibutton title={props.btnTitle} cssName="rounded-small-btn" onClickEvent={props.onBtnCkick} />
                         </div>
                     </div>
                 </div>

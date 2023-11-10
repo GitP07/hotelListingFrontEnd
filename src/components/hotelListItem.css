@@ -249,3 +249,34 @@
         font-size: 0.6rem;
     }
 }
+
+
+@media screen and (max-width: 415px){
+    .hotelList-name-cont p{
+        font-weight: 700;
+        font-size: 0.7rem;
+      
+    }
+
+    .hotel-avgReview-cont p{
+        font-weight: 600;
+        font-size: 0.6rem; 
+    }
+    .hotel-reviewCount-cont{
+        font-weight: 600;
+        font-size: 0.6rem;
+        
+    }
+    .hotel-descText-cont p{
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    .hotelList-offerPer-cont p{
+        font-weight: 800;
+        font-size: 0.6rem;
+    }
+    .hotelListprice-cont p{
+        font-weight: 700;
+        font-size: 0.6rem;
+    }
+}

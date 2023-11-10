@@ -215,3 +215,14 @@
         color: white;
     }
 }
+
+@media screen and (max-width: 415px){
+    .rounded-small-btn{
+        width: 30%;
+    }
+    .rounded-small-btn p{
+        font-weight: 600;
+        font-size: 0.6rem;
+        color: white;
+    }
+}
