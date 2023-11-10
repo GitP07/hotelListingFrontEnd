@@ -63,13 +63,13 @@ function HotelRoomList() {
 
 
     useEffect(() => {
-        const verifyCookie = async () => {
-            if (!cookies.token) {
-                navigate('/')
-            }
+        // const verifyCookie = async () => {
+        //     if (!cookies.token) {
+        //         navigate('/')
+        //     }
 
-        }
-        verifyCookie();
+        // }
+        // verifyCookie();
 
         axios.get("https://hotels-api-1035.onrender.com/hotelsLists", { withCredentials: true })
             .then((res) => {
