@@ -71,7 +71,7 @@ function HotelRoomList() {
         }
         verifyCookie();
 
-        axios.get("https://hotels-api-1035.onrender.com", { withCredentials: true })
+        axios.get("https://hotels-api-1035.onrender.com/hotelsLists", { withCredentials: true })
             .then((res) => {
                 return setHotelInfo(res.data);
             })
