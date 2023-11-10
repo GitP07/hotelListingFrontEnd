@@ -47,7 +47,7 @@ function HotelRoomList() {
 
     useEffect(() => {
         const verifyCookie = async () => {
-            console.log(`${cookies}  bellow is token`);
+            console.log(`${JSON.stringify(cookies)}  bellow is token`);
             console.log(cookies.token);
 
             if (!cookies.token) {
